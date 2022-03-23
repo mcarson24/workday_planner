@@ -85,6 +85,7 @@ textarea {
 .time-block p {
   border-top: 1px dashed black;
   margin: 0;
+  cursor: pointer;
 }
 
 .save {
