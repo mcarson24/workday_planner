@@ -1,0 +1,1 @@
+$('button.save').click(() => console.log('saving...'))
