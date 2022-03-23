@@ -1,7 +1,9 @@
 // Set classes on the time blocks based on the time.
+// Set the current time in the heading.
 (() => {
   const currentTime = luxon.DateTime.now()
-  const hour = currentTime.toFormat('H')
+  // const hour = currentTime.toFormat('H')
+  const hour = 15
   const timeBlocks = $('.time-block')
   timeBlocks.toArray().forEach(timeBlock => {
     const timeBlockHour = parseInt(timeBlock.dataset.hour)
