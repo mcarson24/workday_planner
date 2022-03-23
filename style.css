@@ -76,7 +76,17 @@ textarea {
   display: none;
 }
 
-.time-block {
+.time-block .hour {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.time-block p {
+  border-top: 1px dashed black;
+  margin: 0;
+}
+
+.save {
+  font-size: 1.25rem;
 }
