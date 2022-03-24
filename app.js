@@ -29,9 +29,8 @@ $('.time-block').on('click', '.task', e => {
 
 $('button.save').click(e => {
   const el = $(e.target)
-  const parent = el.parent()
-  const timeBlockHour = parent['0'].dataset['hour']
-  let timeBlocks = JSON.parse(localStorage.getItem('timeBlocks')) || {}
+  const timeBlockHour = parent = el.parent()['0'].dataset['hour']
+  const timeBlocks = JSON.parse(localStorage.getItem('timeBlocks')) || {}
   const input = $(e.target).siblings('input')
   const paragraph = el.siblings('p')
   timeBlocks[timeBlockHour] = input['0'].value
