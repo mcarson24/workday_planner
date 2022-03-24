@@ -2,7 +2,7 @@
 // Set the current time in the heading.
 (() => {
   // Get timeblock info stored in localStorage
-  const timeBlockInfo = JSON.parse(localStorage.getItem('timeBlocks'))
+  const timeBlockInfo = JSON.parse(localStorage.getItem('timeBlocks')) || {}
   const currentTime = luxon.DateTime.now()
   const hour = currentTime.toFormat('H')
   const timeBlocks = $('.time-block')
