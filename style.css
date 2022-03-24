@@ -86,8 +86,20 @@ textarea {
   border-top: 1px dashed black;
   margin: 0;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .save {
   font-size: 1.25rem;
+}
+
+.past {
+  cursor: not-allowed !important;
+}
+
+.clear {
+  padding: 25px
 }
