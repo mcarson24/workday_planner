@@ -29,15 +29,31 @@ $('.time-block').on('click', '.task', e => {
 
 $('button.save').click(e => {
   const el = $(e.target)
-  const timeBlockHour = parent = el.parent()['0'].dataset['hour']
+  // console.log(el.parent().parent()['0'].dataset['hour'])
+  const timeBlockHour = el.parent().parent()['0'].dataset['hour']
   const timeBlocks = JSON.parse(localStorage.getItem('timeBlocks')) || {}
-  const input = $(e.target).siblings('input')
-  const paragraph = el.siblings('p')
+  const input = $(e.target).parent().siblings('input')
+  console.log(input)
+  const paragraph = el.parent().siblings('p')
   timeBlocks[timeBlockHour] = input['0'].value
   localStorage.setItem('timeBlocks', JSON.stringify(timeBlocks))
   paragraph.text(input['0'].value)
   paragraph.show()
   input.hide()
+})
+
+$('button.delete').click(e => {
+  const el = $(e.target)
+  const timeBlockHour = el.parent().parent()['0'].dataset['hour']
+  const timeBlocks = JSON.parse(localStorage.getItem('timeBlocks')) || {}
+  timeBlocks[timeBlockHour] = ''
+  const paragraph = el.parent().siblings('p')
+  timeBlocks[timeBlockHour] = ''
+  localStorage.setItem('timeBlocks', JSON.stringify(timeBlocks))
+  paragraph.text('')
+  // $(e.target).parent().siblings('input').value('')
+  const input = $(e.target).parent().siblings('input')
+  input['0'].value = ''
 })
 
 $('#clear').click(() => {

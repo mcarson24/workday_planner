@@ -72,6 +72,10 @@ textarea {
 
 /* My Styles */
 
+.row {
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -102,4 +106,14 @@ textarea {
 
 .clear {
   padding: 25px
+}
+
+.buttons {
+  padding: 0;
+}
+
+.save, 
+.delete {
+  width: 45%;
+  margin: 0 1.5%;
 }
