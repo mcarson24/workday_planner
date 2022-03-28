@@ -22,7 +22,7 @@
 $('.time-block').on('click', '.task', e => {
   const el = $(e.target)
   // Don't allow user to edit time blocks in the past
-  if (el.hasClass('past')) return
+  // if (el.hasClass('past')) return
   el.siblings().eq(1).show()
   el.hide()
 })

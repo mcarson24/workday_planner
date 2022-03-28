@@ -101,7 +101,7 @@ textarea {
 }
 
 .past {
-  cursor: not-allowed !important;
+  /* cursor: not-allowed !important; */
 }
 
 .clear {
